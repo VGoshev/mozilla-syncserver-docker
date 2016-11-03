@@ -76,7 +76,7 @@ rm /usr/local/bin/virtualenv
 #   http://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory
 PYTHON_PACKAGES_DIR=`python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"`
 cp -rf syncserver.egg-info syncserver $PYTHON_PACKAGES_DIR
-cp syncserver.ini /usr/local/share/
+#cp syncserver.ini /usr/local/share/
 
 ########################
 # Do some preparations #

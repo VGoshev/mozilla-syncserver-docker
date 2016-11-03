@@ -22,7 +22,9 @@ COPY build.sh /tmp/build.sh
 # Execute our build script and delete it because we won't need it anymore
 RUN /tmp/build.sh "$GIT_COMMIT" "$DATA_DIR" && rm /tmp/build.sh
 
-# Container initialization scripts ()
+
+COPY syncserver.ini /usr/local/share/syncserver.ini
+# Container initialization scripts
 COPY docker-run.sh /bin/docker-run
 COPY docker-run-root.sh /bin/docker-run-root
 
