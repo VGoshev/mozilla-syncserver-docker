@@ -3,7 +3,7 @@ Docker image for [Mozilla Sync Server](https://github.com/mozilla-services/syncs
 
 ## Supported tags and respective `Dockerfile` links
 
-* [1.5.2-20160817](https://github.com/SunAngel/mozilla-syncserver-docker/blob/1.5.2-20160817/docker/Dockerfile), [`latest`](https://github.com/SunAngel/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Latest avaliable version of Mozilla syncserver
+* [`1.5.2-20160817`](https://github.com/SunAngel/mozilla-syncserver-docker/blob/1.5.2-20160817/docker/Dockerfile), [`latest`](https://github.com/SunAngel/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Latest avaliable version of Mozilla syncserver
 
 ## Quickstart
 
@@ -42,7 +42,7 @@ On first run of container you can use following ENV variables for Mozilla Syncer
 
 ## Firefox configuration
 
-To configure desktop Firefox to talk to your new Sync server, go to `about:config`, search for `identity.sync.tokenserver.uri` and change its value to the URL of your server with a path of “token/1.0/sync/1.5”:
+To configure desktop Firefox to talk to your new Sync server, go to `about:config`, search for `identity.sync.tokenserver.uri` and change its value to the URL of your server with a path of `token/1.0/sync/1.5`:
 
     identity.sync.tokenserver.uri: http://sync.example.com/token/1.0/sync/1.5
 
