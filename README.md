@@ -38,7 +38,7 @@ For frontend webserver configuration you can read official [Mozilla Syncserver m
 ### Supported ENV variables
 
 On first run of container you can use following ENV variables for Mozilla Syncerver configuration:
-* **`PUBLIC_URL`**=<http[s]://.../> - public URL of your server, i.e. the URL as seen by Firefox. Default: `http://<container_hostname>/`.
+* **`PUBLIC_URL`**=&lt;http[s]://.../&gt; - public URL of your server, i.e. the URL as seen by Firefox. Default: `http://<container_hostname>/`.
 
 ## Firefox configuration
 
