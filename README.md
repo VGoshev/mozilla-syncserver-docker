@@ -12,7 +12,7 @@ To run container you can use following command:
 docker run \  
   -v /home/docker/ffsync:/home/ffsync \  
   -p 127.0.0.1:5000:5000 \  
-  --d sunx/mozilla-syncserver-docker
+  -d sunx/mozilla-syncserver-docker
 ```
 Containers, based on this image will automatically create configuration file for
  Mozilla Syncserver with SQLite database.
