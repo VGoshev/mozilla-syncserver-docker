@@ -49,7 +49,7 @@ apk update
 apk add python py-pip libstdc++
 
 #################################################
-# Add build-deps for Seafile-Server             #
+# Add build-deps                                #
 # I'm creatind variable with them to being able #
 #  to delete them back after building           #
 #################################################
