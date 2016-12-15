@@ -2,8 +2,8 @@
 Docker image for [Mozilla Sync Server](https://github.com/mozilla-services/syncserver)
 
 ## Supported tags and respective `Dockerfile` links
-* [`1.6.0`](https://github.com/SunAngel/mozilla-syncserver-docker/blob/1.6.0/docker/Dockerfile), [`latest`](https://github.com/SunAngel/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Latest avaliable version of Mozilla syncserver
-* [`1.5.2-20160817`](https://github.com/SunAngel/mozilla-syncserver-docker/blob/1.5.2-20160817/docker/Dockerfile) - Mozilla syncserver 1.5.2
+* [`1.6.0`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/1.6.0/docker/Dockerfile), [`latest`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Latest avaliable version of Mozilla syncserver
+* [`1.5.2-20160817`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/1.5.2-20160817/docker/Dockerfile) - Mozilla syncserver 1.5.2
 
 ## Quickstart
 
@@ -50,6 +50,6 @@ More details you can find in [Official Manual](https://docs.services.mozilla.com
 
 ## License
 
-This Dockerfile and scripts are released under [MIT License](https://github.com/SunAngel/mozilla-syncserver-docker/blob/master/LICENSE).
+This Dockerfile and scripts are released under [MIT License](https://github.com/VGoshev/mozilla-syncserver-docker/blob/master/LICENSE).
 
 [Mozilla Syncserver](https://github.com/mozilla-services/syncserver) has its own license.
