@@ -2,7 +2,7 @@
 Docker image for [Mozilla Sync Server](https://github.com/mozilla-services/syncserver)
 
 ## Supported tags and respective `Dockerfile` links
-* [`1.6.0`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/1.6.0/docker/Dockerfile), [`latest`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Latest avaliable version of Mozilla syncserver
+* [`1.6.0`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/1.6.0/docker/Dockerfile), [`latest`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Latest available version of Mozilla syncserver
 * [`1.5.2-20160817`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/1.5.2-20160817/docker/Dockerfile) - Mozilla syncserver 1.5.2
 
 ## Quickstart
