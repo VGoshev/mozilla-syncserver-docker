@@ -13,7 +13,7 @@ MAINTAINER Vladimir Goshev <sunx@sunx.name>
 # uUID - set UID of ffsync user, default: 2016
 # uGID - set GID of ffsync user, default: 2016
 ENV DATA_DIR="/home/ffsync" \
-	GIT_COMMIT="7fe5c0fafc321135ef1d124d334b9b4d8489a65a"
+	GIT_COMMIT="4f4787eadf729be5dd92d27b25c4317784ce00a7"
 
 # All installation proccess is in build.sh
 # It is possible to do all work via RUN command(s)
