@@ -25,8 +25,7 @@ RUN /tmp/build.sh "$GIT_COMMIT" "$DATA_DIR" && rm /tmp/build.sh
 
 COPY syncserver.ini /usr/local/share/syncserver.ini
 # Container initialization scripts
-COPY docker-run.sh /bin/docker-run
-COPY docker-run-root.sh /bin/docker-run-root
+COPY docker-run docker-run-root /bin/
 
 EXPOSE 5000
 VOLUME $DATA_DIR
