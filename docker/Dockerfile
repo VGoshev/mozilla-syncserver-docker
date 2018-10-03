@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.8
 MAINTAINER Vladimir Goshev <sunx@sunx.name>
 
 # DATA_DIR:
@@ -13,9 +13,9 @@ MAINTAINER Vladimir Goshev <sunx@sunx.name>
 # uUID - set UID of ffsync user, default: 2016
 # uGID - set GID of ffsync user, default: 2016
 ENV DATA_DIR="/home/ffsync" \
-	GIT_COMMIT="4f4787eadf729be5dd92d27b25c4317784ce00a7"
+	GIT_COMMIT="9c6aa913698ec72e906d879bec9ca04a4e027842"
 
-# All installation proccess is in build.sh
+# Whole installation process is in build.sh
 # It is possible to do all work via RUN command(s)
 # But it looks much better with all work in script
 COPY build.sh /tmp/build.sh

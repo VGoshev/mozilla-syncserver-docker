@@ -46,15 +46,13 @@ apk update
 ###############################################
 # Runtime dependencies for Mozilla Syncserver #
 ###############################################
-apk add python py-pip libstdc++
+apk add python py-pip libstdc++ libffi openssl
 
 #################################################
 # Add build-deps                                #
-# I'm creatind variable with them to being able #
-#  to delete them back after building           #
 #################################################
-BUILD_DEP="python-dev make gcc g++ git"
-apk add $BUILD_DEP
+apk add --virtual .build_dep \
+	python-dev make gcc g++ git libffi-dev openssl-dev
 
 ################################################
 # Clone mozilla-syncserv and get needed commit #
@@ -90,7 +88,7 @@ adduser -D -s /bin/sh -g "Mozilla Syncserver" -G ffsync -h "$DATA_DIR" -u "$uUID
 # Delete all unneded files and packages #
 #########################################
 cd /
-apk del --purge $BUILD_DEP
+apk del --purge .build_dep
 rm /var/cache/apk/*
 rm -rf /root/.cache
 rm -rf $WORK_DIR
