@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 MAINTAINER Vladimir Goshev <sunx@sunx.name>
 
 # DATA_DIR:
@@ -27,8 +27,8 @@ COPY syncserver.ini /usr/local/share/syncserver.ini
 # Container initialization scripts
 COPY docker-run docker-run-root /bin/
 
-EXPOSE 5000
-VOLUME $DATA_DIR
+#EXPOSE 5000
+#VOLUME $DATA_DIR
 
 # Container will run some preparations with root access (fixing permissions, for example)
 #   and then execute /bin/docker-run with user access to configure (if needed) and run

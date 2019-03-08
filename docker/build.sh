@@ -46,7 +46,8 @@ apk update
 ###############################################
 # Runtime dependencies for Mozilla Syncserver #
 ###############################################
-apk add python py-pip libstdc++ libffi openssl
+apk add python py-pip libstdc++ libffi openssl su-exec
+pip install PyMySQL
 
 #################################################
 # Add build-deps                                #

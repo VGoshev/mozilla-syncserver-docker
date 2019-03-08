@@ -6,7 +6,14 @@ DB_FILE="syncserver.db"
 
 cd $HOME
 
-if [ ! -e "$CONFIG_FILE" ]; then
+[ -z "$FFSYNC_SQLURI"               ] && FFSYNC_SQLURI="sqlite:///$HOME/$DB_FILE"
+[ -z "$FFSYNC_SECRET"               ] && FFSYNC_SECRET=`head -c 20 /dev/urandom | sha1sum | awk '{print $1}'`
+[ -z "$FFSYNC_PUBLIC_URL"           ] && FFSYNC_PUBLIC_URL="http://localhost:5000/"
+[ -z "$FFSYNC_ALLOW_NEW_USERS"      ] && FFSYNC_ALLOW_NEW_USERS="false"
+[ -z "$FFSYNC_IDENTITY_PROVIDER"    ] && FFSYNC_IDENTITY_PROVIDER="https://accounts.firefox.com/"
+[ -z "$FFSYNC_FORCE_CONFIG_REWRITE" ] && FFSYNC_FORCE_CONFIG_REWRITE="false"
+
+if [ ! -e "$CONFIG_FILE" -o "$FFSYNC_FORCE_CONFIG_REWRITE" = "true" ]; then
 #	cp /usr/local/share/$CONFIG_FILE ./$CONFIG_FILE
 	SECRET=`head -c 20 /dev/urandom | sha1sum | awk '{print $1}'`
 	HOSTNAME=`hostname`
@@ -14,9 +21,13 @@ if [ ! -e "$CONFIG_FILE" ]; then
 	SQLURI="sqlite:///$HOME/$DB_FILE"
 
 	cat /usr/local/share/$CONFIG_FILE | \
-		sed "/^\s*secret\s*=/s,=.*,= $SECRET," |
-		sed "/^\s*sqluri\s*=/s,=.*,= $SQLURI," |
-		sed "/^\s*public_url\s*=/s,=.*,= $PUBLIC_URL," > ./$CONFIG_FILE
+		sed \
+		-e "/^\s*secret\s*=/s,=.*,= $FFSYNC_SECRET," \
+		-e "/^\s*sqluri\s*=/s,=.*,= $FFSYNC_SQLURI," \
+		-e "/^\s*public_url\s*=/s,=.*,= $FFSYNC_PUBLIC_URL," \
+		-e "/^\s*allow_new_users\s*=/s,=.*,= $FFSYNC_ALLOW_NEW_USERS," \
+		-e "/^\s*identity_provider\s*=/s,=.*,= $FFSYNC_IDENTITY_PROVIDER," \
+		> ./$CONFIG_FILE
 fi
 
 exec gunicorn --paste "$HOME/$CONFIG_FILE"
