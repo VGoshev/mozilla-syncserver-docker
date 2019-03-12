@@ -2,7 +2,7 @@
 Docker image for [Mozilla Sync Server](https://github.com/mozilla-services/syncserver)
 
 ## Supported tags and respective `Dockerfile` links
-* [`1.8.0-20180927`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/1.8.0-20180927/docker/Dockerfile), [`latest`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Mozilla SyncServer 1.8.0
+* [`1.8.0-20190308`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/1.8.0-20190308/docker/Dockerfile), [`latest`](https://github.com/VGoshev/mozilla-syncserver-docker/blob/master/docker/Dockerfile) - Mozilla SyncServer 1.8.0
 
 ## Quickstart
 
