@@ -54,6 +54,7 @@ pip install PyMySQL
 #################################################
 apk add --virtual .build_dep \
 	python-dev make gcc g++ git libffi-dev openssl-dev
+#py2-virtualenv
 
 ################################################
 # Clone mozilla-syncserv and get needed commit #
@@ -68,6 +69,7 @@ echo '#!/bin/sh' > /usr/local/bin/virtualenv
 chmod +x /usr/local/bin/virtualenv
 mkdir ./local
 ln -s /usr/bin ./local/
+sed -i.bak -e 's,^\s*VIRTUALENV\s*=.*$,VIRTUALENV = /bin/echo,' Makefile
 make build
 rm /usr/local/bin/virtualenv
 
