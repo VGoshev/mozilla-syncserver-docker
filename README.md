@@ -1,4 +1,5 @@
 # Mozilla Firefox Sync Server Docker image
+This repo is obsoleted due to syncserver doesn't work on python 3
 Docker image for [Mozilla Sync Server](https://github.com/mozilla-services/syncserver)
 
 ## Supported tags and respective `Dockerfile` links
